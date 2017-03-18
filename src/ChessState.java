@@ -41,6 +41,7 @@ class ChessState {
         return pos - 1;
     }
 
+
     public static void main(String[] args) throws Exception {
         ChessState s = new ChessState();
         s.resetBoard();

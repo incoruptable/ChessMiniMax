@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -8,12 +7,13 @@ public class Node {
     public List<Node> children;
     private Node parent;
     private ChessState currentState;
-    private int nodeValue;
+
+    public Node() {
+
+    }
 
     public Node(Node parent) {
         this.parent = parent;
-        currentState = new ChessState();
-        children = new ArrayList<>();
     }
 
     public ChessState getCurrentState() {
@@ -21,6 +21,6 @@ public class Node {
     }
 
     public void setCurrentState(ChessState currentState) {
-        this.currentState = currentState;
+        this.currentState = new ChessState(currentState);
     }
 }
